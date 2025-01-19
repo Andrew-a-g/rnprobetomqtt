@@ -4,24 +4,30 @@ A python script to poll endpoints on a reticulum LoRa network and log RSSI, SNR 
 ## Requirements
 Python
 Paho mqtt client...
-
-    `pip3 install paho-mqtt`
+```
+pip3 install paho-mqtt
+```
 
 ## Usage
 1. Add your LXMF endpoints to the rnprobe-destinations text file, one on each line.  I recommend adding the PI devices if they are used in the network as they are normally always on - meshchat and nomadnet instances can come and go.  The config of rns on a pi (at ~/.reticulum/config) must include the following line to respond to probe requests...
-
-    `respond_to_probes = yes`
+    ```
+    respond_to_probes = yes
+    ```
 
 2. Edit the script with yout mqtt server data
 
-   ```MQTT_BROKER = "mqtt_server"
+   ```
+   MQTT_BROKER = "mqtt_server"
     MQTT_PORT = 1883
     MQTT_TOPIC = "reticulum/data"
     MQTT_USERNAME = "user"
-    MQTT_PASSWORD = "password"```
+    MQTT_PASSWORD = "password"
+    ```
 
 3. Change the interval if required or troubleshooting (be mindful of LoRa traffic when doing this)
-    ```POLL_INTERVAL = 3600  # Default: 60 minutes```
+    ```
+    POLL_INTERVAL = 3600  # Default: 60 minutes
+    ```
 
 ## Home Assistant
 Example home assistant config to collect the data...
