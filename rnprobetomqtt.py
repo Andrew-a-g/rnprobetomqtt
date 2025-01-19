@@ -17,7 +17,7 @@ MQTT_USERNAME = "user"
 MQTT_PASSWORD = "password"
 
 # Load destinations from a text file
-DESTINATIONS_FILE = "reticulum-destinations"
+DESTINATIONS_FILE = "rnprobe-destinations"
 
 # Polling interval (in seconds)
 POLL_INTERVAL = 3600  # Default: 60 minutes
