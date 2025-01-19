@@ -25,7 +25,6 @@ Paho mqtt client...
 
 ## Home Assistant
 Example home assistant config to collect the data...
-    
 ``` 
    - name: "RNS Mark Latency"
         state_topic: "reticulum/data"
@@ -80,4 +79,4 @@ Example home assistant config to collect the data...
         {% endif %}
         unit_of_measurement: "%"
         unique_id: "mark_rnsd_packet_loss"
-    ```
+```
